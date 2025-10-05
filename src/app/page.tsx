@@ -1,103 +1,182 @@
+import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Heart, Users, Building2, Sprout } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="bg-accent/30">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-accent/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="text-center lg:text-left order-2 lg:order-1">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-plum mb-6 leading-tight">
+                Supporting Emotional Health in People, Communities & Teams
+              </h1>
+              <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
+                Welcome to <strong className="text-plum">Narrative Bloom Psychology</strong> — a space
+                where your story is seen, heard, and honoured. Whether you're
+                navigating transition, processing emotional wounds, or simply trying
+                to make sense of it all.
+              </p>
+              <p className="text-lg text-gray-600 mb-8">
+                Grounded in empathy, presence, and professional integrity, I offer
+                therapeutic support that holds space for your becoming — one
+                conversation at a time.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-primary hover:bg-primary-dark text-lg px-8 py-6"
+                >
+                  <Link href="/contact">Start Your Journey</Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6"
+                >
+                  <Link href="/about">Learn More</Link>
+                </Button>
+              </div>
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {/* Photo Card */}
+            <div className="order-1 lg:order-2 flex justify-center">
+              <div className="relative">
+                {/* Floating card with shadow */}
+                <div className="relative bg-white rounded-2xl shadow-2xl p-2 transform hover:scale-105 transition-transform duration-300">
+                  <div className="relative w-72 h-96 md:w-80 md:h-[28rem] rounded-xl overflow-hidden">
+                    <Image
+                      src="/mbali-hero.jpg"
+                      alt="Mbalentle Feliti - Counselling Psychologist"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                  {/* Decorative elements */}
+                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-secondary/30 rounded-full blur-2xl -z-10"></div>
+                  <div className="absolute -top-4 -left-4 w-32 h-32 bg-sage/20 rounded-full blur-2xl -z-10"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Services Overview */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-serif font-bold text-primary mb-4">
+              How I Can Support You
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Thoughtful, collaborative support shaped by who you are.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="bg-white hover:shadow-lg transition-all duration-300 border-t-4 border-sage">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-sage/10 rounded-full flex items-center justify-center mb-4">
+                  <Heart className="w-6 h-6 text-sage" />
+                </div>
+                <h3 className="text-xl font-serif font-semibold text-primary mb-3">
+                  Individual Therapy
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Support for anxiety, burnout, identity exploration, trauma,
+                  and life transitions.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white hover:shadow-lg transition-all duration-300 border-t-4 border-secondary">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mb-4">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-serif font-semibold text-primary mb-3">
+                  Couples Therapy
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Navigate connection, conflict, and communication with
+                  compassion and honesty.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white hover:shadow-lg transition-all duration-300 border-t-4 border-sage">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-sage/10 rounded-full flex items-center justify-center mb-4">
+                  <Sprout className="w-6 h-6 text-sage" />
+                </div>
+                <h3 className="text-xl font-serif font-semibold text-primary mb-3">
+                  Group Sessions
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Facilitated spaces exploring burnout, self-worth, identity,
+                  and collective healing.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white hover:shadow-lg transition-all duration-300 border-t-4 border-secondary">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mb-4">
+                  <Building2 className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-serif font-semibold text-primary mb-3">
+                  Corporate Wellness
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Mental health workshops and sessions designed for teams and
+                  organizations.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-10">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-primary text-primary hover:bg-primary/10"
+            >
+              <Link href="/services">Explore All Services</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary text-accent">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
+            Ready to Begin?
+          </h2>
+          <p className="text-xl mb-8 text-accent/90">
+            Taking the first step can feel daunting — I honour that. Let's
+            connect and explore how I can support you.
+          </p>
+          <Button
+            asChild
+            size="lg"
+            variant="secondary"
+            className="bg-accent text-primary hover:bg-accent/90 text-lg px-8 py-6"
+          >
+            <Link href="/contact">Get in Touch</Link>
+          </Button>
+        </div>
+      </section>
     </div>
   );
 }
