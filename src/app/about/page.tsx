@@ -1,8 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Award } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function About() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <div className="bg-accent/30 py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

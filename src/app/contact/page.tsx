@@ -155,7 +155,7 @@ export default function Contact() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-primary hover:bg-primary/90 text-lg py-6"
+                    className="w-full bg-primary hover:bg-primary-dark text-lg py-6 transform hover:scale-105 transition-all duration-200"
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
@@ -166,17 +166,17 @@ export default function Contact() {
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <Card className="bg-white shadow-md">
+            <Card className="bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-primary mb-2">Email</h3>
+                    <h3 className="font-semibold text-plum mb-2">Email</h3>
                     <a
                       href="mailto:hello@narrativebloom.co.za"
-                      className="text-gray-600 hover:text-primary transition-colors"
+                      className="text-gray-600 hover:text-primary transition-colors duration-200"
                     >
                       hello@narrativebloom.co.za
                     </a>
@@ -185,14 +185,14 @@ export default function Contact() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white shadow-md">
+            <Card className="bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-primary mb-2">
+                    <h3 className="font-semibold text-plum mb-2">
                       Location
                     </h3>
                     <p className="text-gray-600">Johannesburg, South Africa</p>
@@ -204,14 +204,14 @@ export default function Contact() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white shadow-md">
+            <Card className="bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <Clock className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-primary mb-2">
+                    <h3 className="font-semibold text-plum mb-2">
                       Response Time
                     </h3>
                     <p className="text-gray-600 text-sm">
@@ -223,7 +223,7 @@ export default function Contact() {
               </CardContent>
             </Card>
 
-            <Card className="bg-primary text-accent shadow-md">
+            <Card className="bg-primary text-accent shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <h3 className="font-semibold mb-3 text-lg">
                   HPCSA Registration
