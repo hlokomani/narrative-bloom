@@ -137,7 +137,7 @@ export default function About() {
                 </p>
                 <p className="text-lg">PS 016 4445</p>
                 <p className="text-sm text-gray-500 mt-4 italic">
-                  Practice number pending
+                  PR 1268333
                 </p>
               </div>
             </CardContent>
